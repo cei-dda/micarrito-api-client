@@ -11,7 +11,7 @@ namespace micarrito_api_client
     class User
     {
         [JsonPropertyName("id")]
-        public long Id { set; get; }
+        public long? Id { set; get; }
         [JsonPropertyName("firstname")]
         public string Firstname { set; get; }
         [JsonPropertyName("lastname")]
@@ -58,9 +58,7 @@ namespace micarrito_api_client
             Console.WriteLine("lastname: " + user.Lastname);
 
             User userToSave = new User();
-            userToSave.Id = 20;
-            userToSave.Firstname = "perdon";
-            userToSave.Lastname = "me mando dotnet";
+            userToSave.Firstname = "jose";
 
             await SaveUser(userToSave);
 
